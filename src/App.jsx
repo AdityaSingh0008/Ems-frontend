@@ -174,27 +174,28 @@ function App() {
 
       <div className="employee-grid">
         {filteredEmployees.map((employee) => (
-          <div key={employee.id} className="card">
-            <h3>{employee.name}</h3>
+         
+    <div key={employee.id} className="card">
+  <h3>{employee.name}</h3>
 
-            <p>Department: {employee.department}</p>
+  <p>Department: {employee.department}</p>
 
-            <p>Salary: ₹{employee.salary}</p>
+  <p>Salary: ₹{employee.salary}</p>
 
-            <button
-              className="edit-btn"
-              onClick={() => editEmployee(employee)}
-            >
-              Edit
-            </button>
+  <button
+    className="edit-btn"
+    onClick={() => editEmployee(employee)}
+  >
+    ✏️ Edit Employee
+  </button>
 
-            <button
-              className="delete-btn"
-              onClick={() => deleteEmployee(employee.id)}
-            >
-              Delete
-            </button>
-          </div>
+  <button
+    className="delete-btn"
+    onClick={() => deleteEmployee(employee.id)}
+  >
+    🗑️ Delete Employee
+  </button>
+</div>
         ))}
       </div>
     </div>
